@@ -1,106 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teacher Feedback Form</title>
 
-    }
+<style>
+/* PAGE */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-image: url('background.jpeg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  overflow-y: auto;
+  padding: 40px 15px;
+}
 
-    /* HEADER */
-    .header {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+/* FORM CONTAINER */
+.overlay {
+  background: rgba(255,255,255,0.96);
+  max-width: 900px;
+  margin: auto;
+  padding: 50px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+}
 
-    /* LOGO ONLY – BIG & CLEAR */
-    .header img {
-      width: 320px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
+/* HEADER */
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+}
 
-    .subtitle {
-      text-align: center;
-      color: #555;
-      margin-bottom: 35px;
-      font-size: 18px;
-    }
+.header img {
+  width: 220px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 10px;
+}
 
-    .field {
-      margin-bottom: 22px;
-    }
+/* SUBTITLE */
+.subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 35px;
+}
 
-    label {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 6px;
-    }
+/* FIELDS */
+.field {
+  margin-bottom: 22px;
+}
 
-    .underline-input {
-      width: 100%;
-      border: none;
-      border-bottom: 2px solid #4285f4;
-      outline: none;
-      padding: 8px;
-      font-size: 15px;
-    }
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
 
-    select {
-      width: 100%;
-      padding: 10px;
-      font-size: 15px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
+input[type="text"] {
+  width: 100%;
+  font-size: 16px;
+  padding: 8px 4px;
+  border: none;
+  border-bottom: 2px solid #4285f4;
+  outline: none;
+}
 
-    .options {
-      margin-left: 10px;
-      line-height: 2;
-    }
+select {
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
 
-    .divider {
-      border-bottom: 1px solid #ddd;
-      margin: 30px 0;
-    }
+/* RADIO */
+.options {
+  font-size: 16px;
+  line-height: 2;
+}
 
-    button {
-      background-color: #1a73e8;
-      color: white;
-      border: none;
-      padding: 14px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      width: 100%;
-    }
+/* DIVIDER */
+.divider {
+  margin: 30px 0;
+  border-bottom: 1px solid #ddd;
+}
 
-    button:hover {
-      background-color: #1669c1;
-    }
+/* BUTTON */
+button {
+  width: 100%;
+  background: #1a73e8;
+  color: #fff;
+  border: none;
+  padding: 16px;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
-    .thank-you {
-      text-align: center;
-      font-size: 22px;
-      color: #1a73e8;
-      padding: 30px;
-    }
+button:hover {
+  background: #145ec4;
+}
 
-    .another {
-      text-align: center;
-      margin-top: 10px;
-    }
+/* THANK YOU */
+.thank-you {
+  font-size: 24px;
+  color: #1a73e8;
+  text-align: center;
+  padding: 40px 0;
+}
 
-    .another a {
-      color: #1a73e8;
-      text-decoration: underline;
-      cursor: pointer;
-    }
-  </style>
+.another {
+  text-align: center;
+}
+
+.another a {
+  color: #1a73e8;
+  cursor: pointer;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .overlay {
+    padding: 30px 20px;
+  }
+}
+</style>
 </head>
 
 <body>
 
 <div class="overlay" id="formBox">
 
-  <!-- LOGO ONLY (NO TEXT BELOW IT) -->
   <div class="header">
-    <img src="logo.png" alt="Sarada Vilas College Logo">
+    <img src="logo.png" alt="College Logo">
   </div>
 
   <div class="subtitle">
@@ -110,7 +146,7 @@
 
   <div class="field">
     <label>Student Name</label>
-    <input type="text" class="underline-input" id="studentName">
+    <input type="text" id="studentName">
   </div>
 
   <div class="field">
@@ -134,7 +170,7 @@
       <option>Akshaya H L</option>
       <option>Nagesh M</option>
       <option>Anitha</option>
-      <option>Dr.K.N.Girisha</option>
+      <option>Dr. K. N. Girisha</option>
       <option>Venkatesh</option>
       <option>Jyothi</option>
       <option>Bhoomika</option>
@@ -159,12 +195,82 @@
 
   <div class="divider"></div>
 
+  <div class="field">
+    <label>Teaching Quality</label>
+    <select id="teachingSelect">
+      <option value="">Select</option>
+      <option>Excellent</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Communication Skills</label>
+    <select id="communicationSelect">
+      <option value="">Select</option>
+      <option>Excellent</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Punctuality</label>
+    <select id="punctualitySelect">
+      <option value="">Select</option>
+      <option>Always</option>
+      <option>Sometimes</option>
+      <option>Rarely</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Strength of Teacher</label>
+    <div class="options">
+      <input type="radio" name="strength" value="Friendly"> Friendly<br>
+      <input type="radio" name="strength" value="Clear Explanation"> Clear Explanation<br>
+      <input type="radio" name="strength" value="Encouraging"> Encouraging<br>
+      <input type="radio" name="strength" value="Well Prepared"> Well Prepared
+    </div>
+  </div>
+
+  <div class="field">
+    <label>Overall Rating</label>
+    <select id="overallSelect">
+      <option value="">Select</option>
+      <option>Excellent</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+    </select>
+  </div>
+
   <button onclick="submitForm()">Submit</button>
 </div>
 
 <script>
 function submitForm() {
-  document.getElementById("formBox").innerHTML = `
+  const required = [
+    studentName.value,
+    courseSelect.value,
+    teacherSelect.value,
+    subjectSelect.value,
+    teachingSelect.value,
+    communicationSelect.value,
+    punctualitySelect.value,
+    overallSelect.value,
+    document.querySelector('input[name="strength"]:checked')
+  ];
+
+  if (required.includes("") || required.includes(null)) {
+    alert("Please fill all fields");
+    return;
+  }
+
+  formBox.innerHTML = `
     <div class="thank-you">Thank you for your feedback!</div>
     <div class="another"><a href="">Submit another response</a></div>
   `;
@@ -173,8 +279,3 @@ function submitForm() {
 
 </body>
 </html>
-
-
-    
-
-
