@@ -16,16 +16,19 @@
       padding: 40px;
     }
 
-    /* Semi-transparent form overlay */
     .overlay {
-      background: rgba(255, 255, 255, 0.95);
-      padding: 50px 60px;  /* Bigger padding */
-      max-width: 900px;     /* Wider container */
-      width: 90%;
-      margin: auto;
-      border-radius: 12px;
-      box-shadow: 0 3px 20px rgba(0,0,0,0.3);
-    }
+  background: rgba(255, 255, 255, 0.95);
+  padding: 50px 60px;
+  max-width: 900px;
+  width: 90%;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.3);
+  
+  transform: scale(1.2);   /* Zooms the form 120% */
+  transform-origin: top center; /* Zoom from top */
+}
+
 
     /* Header with college logo and title */
     .header {
