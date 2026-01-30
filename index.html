@@ -28,28 +28,38 @@ body {
   box-shadow: 0 8px 30px rgba(0,0,0,0.35);
 }
 
-/* Container for the header */
+/* Header container */
 .header {
-  text-align: center; /* centers the content horizontally */
-  margin-bottom: 30px; /* space below header */
+  background-color: #f0f0f0;   /* light gray background to unify header */
+  padding: 30px 20px;          /* space around logo + subtitle */
+  text-align: center;           /* center all content horizontally */
+  border-radius: 10px 10px 0 0; /* optional: rounded top corners */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* subtle shadow for depth */
 }
 
-/* Logo styling */
-.header .logo {
-  width: 70%;          /* logo takes 70% of container width */
-  max-width: 700px;    /* won't exceed 700px */
-  height: auto;        /* keeps aspect ratio */
-  display: block;      /* allows margin auto centering if needed */
-  margin: 0 auto 20px; /* centers and adds spacing below */
+/* Logo image */
+.logo {
+  width: 200px;       /* adjust as needed for design */
+  max-width: 100%;    /* responsive */
+  height: auto;
+  display: block;
+  margin: 0 auto 15px; /* spacing between logo and title */
+  transition: transform 0.3s ease; /* optional for hover zoom */
 }
 
-/* Subtitle styling */
-.header .subtitle {
-  font-weight: bold;   /* makes text bold */
-  font-size: 1.2rem;   /* adjusts size of subtitle text */
-  line-height: 1.4;    /* spacing between lines */
-  color: #000;         /* text color (black) */
+/* Hover zoom effect for logo (optional) */
+.logo:hover {
+  transform: scale(1.1); /* logo grows 10% on hover */
 }
+
+/* Subtitle text */
+.subtitle {
+  font-weight: bold;
+  font-size: 1.4rem;   /* bigger title */
+  line-height: 1.4;
+  color: #333;
+}
+
 
 
 /* FIELDS */
@@ -144,7 +154,7 @@ button:hover {
     <!-- Logo image -->
     <img src="logo.png" alt="Logo" class="logo">
 
-    <!-- Subtitle text -->
+    <!-- Title and subtitle -->
     <div class="subtitle">
       Teacher Feedback Form<br>
       Your responses help us improve teaching quality
@@ -152,7 +162,13 @@ button:hover {
 
   </div>
 
+  <!-- Body content can go here -->
+  <div class="form-body">
+    <!-- form fields, etc. -->
+  </div>
+
 </div>
+
 
   <div class="field">
     <label>Student Name</label>
