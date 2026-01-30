@@ -35,11 +35,12 @@ body {
 }
 
 .header img {
-  width: 500px;
-  max-width: 250%;
+  width: 700px; /* bigger than 500px */
+  max-width: 100%; /* prevents it from overflowing the container */
   display: block;
   margin: 0 auto 25px;
 }
+
 
 /* SUBTITLE */
 .subtitle {
@@ -136,8 +137,9 @@ button:hover {
 <div class="overlay" id="formBox">
 
   <div class="header">
-    <img src="logo.png" alt="College Logo">
-  </div>
+  <img src="logo.png" alt="Logo" width="700">
+</div>
+
 
   <div class="subtitle">
     <b>
