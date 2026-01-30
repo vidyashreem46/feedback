@@ -28,27 +28,29 @@ body {
   box-shadow: 0 8px 30px rgba(0,0,0,0.35);
 }
 
-/* HEADER */
+/* Container for the header */
 .header {
-  text-align: center;
-  margin-bottom: 30px;
+  text-align: center; /* centers the content horizontally */
+  margin-bottom: 30px; /* space below header */
 }
 
-.header img {
-  width: 700px; /* bigger than 500px */
-  max-width: 100%; /* prevents it from overflowing the container */
-  display: block;
-  margin: 0 auto 25px;
+/* Logo styling */
+.header .logo {
+  width: 70%;          /* logo takes 70% of container width */
+  max-width: 700px;    /* won't exceed 700px */
+  height: auto;        /* keeps aspect ratio */
+  display: block;      /* allows margin auto centering if needed */
+  margin: 0 auto 20px; /* centers and adds spacing below */
 }
 
-
-/* SUBTITLE */
-.subtitle {
-  text-align: center;
-  font-size: 18px;
-  color: #555;
-  margin-bottom: 35px;
+/* Subtitle styling */
+.header .subtitle {
+  font-weight: bold;   /* makes text bold */
+  font-size: 1.2rem;   /* adjusts size of subtitle text */
+  line-height: 1.4;    /* spacing between lines */
+  color: #000;         /* text color (black) */
 }
+
 
 /* FIELDS */
 .field {
@@ -135,18 +137,16 @@ button:hover {
 <body>
 
 <div class="overlay" id="formBox">
-
   <div class="header">
-  <img src="logo.png" alt="Logo" width="700">
-</div>
-
-
-  <div class="subtitle">
-    <b>
-      Teacher Feedback Form<br>
-    Your responses help us improve teaching quality
-    </b> 
+    <img src="logo.png" alt="Logo" class="logo">
+    <div class="subtitle">
+      <b>
+        Teacher Feedback Form<br>
+      Your responses help us improve teaching quality
+      </b> 
+    </div>
   </div>
+</div>
 
   <div class="field">
     <label>Student Name</label>
