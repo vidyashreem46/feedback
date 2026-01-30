@@ -1,49 +1,302 @@
-<style>
-  /* Page Background */
-  body {
-    font-family: "Segoe UI", Arial, sans-serif;
-    background-image: url('background.jpeg'); /* changed from URL to local file */
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    padding: 40px;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sarada Vilas College - Teacher Feedback Form</title>
 
-  /* Semi-transparent form overlay */
-  .overlay {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 40px;
-    max-width: 700px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 1px 10px rgba(0,0,0,0.2);
-  }
+  <style>
+    /* Page Background */
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-image: url('background.jpeg'); /* Local background image */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 40px;
+    }
 
-  /* Header with college logo and title */
-  .header {
-    text-align: center;
-    margin-bottom: 25px;
-  }
+    /* Semi-transparent form overlay */
+    .overlay {
+      background: rgba(255, 255, 255, 0.95);
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+    }
 
-  .header img {
-    max-width: 150px;  /* adjust size if needed */
-    height: auto;
-    display: block;
-    margin: 0 auto 10px;
-  }
+    /* Header with college logo and title */
+    .header {
+      text-align: center;
+      margin-bottom: 25px;
+    }
 
-  .header h1 {
-    margin: 0;
-    font-size: 28px;
-    color: #c70000;
-  }
+    .header img {
+      max-width: 150px; /* Adjust logo size */
+      height: auto;
+      display: block;
+      margin: 0 auto 10px;
+    }
 
-  /* ... rest of your CSS remains the same ... */
-</style>
+    .header h1 {
+      margin: 0;
+      font-size: 28px;
+      color: #c70000;
+    }
 
-<!-- In HTML -->
-<div class="header">
-  <img src="logo.png" alt="Sarada Vilas College Banner"> <!-- local logo file -->
-  <h1>Sarada Vilas College</h1>
+    /* Subtitle */
+    .subtitle {
+      text-align: center;
+      color: #555;
+      margin-bottom: 30px;
+      font-size: 16px;
+    }
+
+    /* Form fields */
+    .field {
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .underline-input {
+      width: 100%;
+      border: none;
+      border-bottom: 2px solid #4285f4;
+      outline: none;
+      padding: 6px 2px;
+      font-size: 15px;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    select:focus {
+      border-color: #4285f4;
+      outline: none;
+    }
+
+    .options {
+      margin-left: 10px;
+      line-height: 2;
+    }
+
+    .divider {
+      border-bottom: 1px solid #ddd;
+      margin: 25px 0;
+    }
+
+    /* Submit button */
+    button {
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      font-size: 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #1669c1;
+    }
+
+    /* Thank you message */
+    .thank-you {
+      text-align: center;
+      font-size: 22px;
+      color: #1a73e8;
+      padding: 30px;
+    }
+
+    .another {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .another a {
+      color: #1a73e8;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div class="overlay" id="formBox">
+
+  <!-- College logo -->
+  <div class="header">
+    <img src="logo.png" alt="Sarada Vilas College Banner"> <!-- Local logo file -->
+    <h1>Sarada Vilas College</h1>
+  </div>
+
+  <div class="subtitle">
+    Teacher Feedback Form<br>
+    Your responses help us improve teaching quality
+  </div>
+
+  <!-- Student Name -->
+  <div class="field">
+    <label>Student Name</label>
+    <input type="text" class="underline-input" id="studentName" placeholder="Your answer">
+  </div>
+
+  <!-- Course -->
+  <div class="field">
+    <label>Course</label>
+    <select id="courseSelect">
+      <option value="">Select</option>
+      <option>B.Sc (PMCs)</option>
+      <option>BCA</option>
+      <option>B.Sc (Hon's) DS & AI</option>
+      <option>B.Sc (CBZ)</option>
+      <option>B.Com</option>
+      <option>BBA</option>
+    </select>
+  </div>
+
+  <!-- Teacher Name -->
+  <div class="field">
+    <label>Teacher Name</label>
+    <select id="teacherSelect">
+      <option value="">Select</option>
+      <option>Shilpashree S</option>
+      <option>Akshaya H L</option>
+      <option>Nagesh M</option>
+      <option>Anitha</option>
+      <option>Dr.K.N.Girisha</option>
+      <option>Venkatesh</option>
+      <option>Jyothi</option>
+      <option>Bhoomika</option>
+    </select>
+  </div>
+
+  <!-- Subject -->
+  <div class="field">
+    <label>Subject</label>
+    <select id="subjectSelect">
+      <option value="">Select</option>
+      <option>C Programming</option>
+      <option>Ada</option>
+      <option>C#</option>
+      <option>Kannada</option>
+      <option>English</option>
+      <option>Artificial Intelligence</option>
+      <option>Operating System</option>
+      <option>Big Data</option>
+      <option>Cyber Law</option>
+    </select>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- Ratings -->
+  <div class="field">
+    <label>Teaching Quality</label>
+    <select id="teachingSelect">
+      <option value="">Select</option>
+      <option>Excellent</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Communication Skills</label>
+    <select id="communicationSelect">
+      <option value="">Select</option>
+      <option>Excellent</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+    </select>
+  </div>
+
+  <div class="field">
+    <label>Punctuality</label>
+    <select id="punctualitySelect">
+      <option value="">Select</option>
+      <option>Always</option>
+      <option>Sometimes</option>
+      <option>Rarely</option>
+    </select>
+  </div>
+
+  <!-- Strength of Teacher -->
+  <div class="field">
+    <label>Strength of Teacher</label>
+    <div class="options">
+      <input type="radio" name="strength" value="Friendly"> Friendly <br>
+      <input type="radio" name="strength" value="Clear Explanation"> Clear Explanation <br>
+      <input type="radio" name="strength" value="Encouraging"> Encouraging <br>
+      <input type="radio" name="strength" value="Well Prepared"> Well Prepared
+    </div>
+  </div>
+
+  <!-- Overall Rating -->
+  <div class="field">
+    <label>Overall Rating</label>
+    <select id="overallSelect">
+      <option value="">Select</option>
+      <option>Excellent</option>
+      <option>Good</option>
+      <option>Average</option>
+      <option>Poor</option>
+    </select>
+  </div>
+
+  <!-- Submit Button -->
+  <button onclick="submitForm()">Submit</button>
+
 </div>
+
+<script>
+  function submitForm() {
+    const name = document.getElementById('studentName').value.trim();
+    const course = document.getElementById('courseSelect').value;
+    const teacher = document.getElementById('teacherSelect').value;
+    const subject = document.getElementById('subjectSelect').value;
+    const teaching = document.getElementById('teachingSelect').value;
+    const communication = document.getElementById('communicationSelect').value;
+    const punctuality = document.getElementById('punctualitySelect').value;
+    const overall = document.getElementById('overallSelect').value;
+    const strength = document.querySelector('input[name="strength"]:checked');
+
+    if (!name) { alert("Please enter your name."); return; }
+    if (!course) { alert("Please select your course."); return; }
+    if (!teacher) { alert("Please select your teacher."); return; }
+    if (!subject) { alert("Please select a subject."); return; }
+    if (!teaching) { alert("Please rate teaching quality."); return; }
+    if (!communication) { alert("Please rate communication skills."); return; }
+    if (!punctuality) { alert("Please select punctuality."); return; }
+    if (!strength) { alert("Please select the strength of the teacher."); return; }
+    if (!overall) { alert("Please give overall rating."); return; }
+
+    document.getElementById("formBox").innerHTML = `
+      <div class="thank-you">
+        Thank you for your feedback, ${name}!
+      </div>
+      <div class="another">
+        <a href="">Submit another response</a>
+      </div>
+    `;
+  }
+</script>
+
+</body>
+</html>
 
