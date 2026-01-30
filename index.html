@@ -19,29 +19,30 @@
     /* Semi-transparent form overlay */
     .overlay {
       background: rgba(255, 255, 255, 0.95);
-      padding: 40px;
-      max-width: 700px;
+      padding: 50px 60px;  /* Bigger padding */
+      max-width: 900px;     /* Wider container */
+      width: 90%;
       margin: auto;
-      border-radius: 10px;
-      box-shadow: 0 1px 10px rgba(0,0,0,0.2);
+      border-radius: 12px;
+      box-shadow: 0 3px 20px rgba(0,0,0,0.3);
     }
 
     /* Header with college logo and title */
     .header {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
     .header img {
-      max-width: 150px; /* Adjust logo size */
+      max-width: 180px; /* Bigger logo */
       height: auto;
       display: block;
-      margin: 0 auto 10px;
+      margin: 0 auto 15px;
     }
 
     .header h1 {
       margin: 0;
-      font-size: 28px;
+      font-size: 32px;  /* Bigger title */
       color: #c70000;
     }
 
@@ -49,19 +50,19 @@
     .subtitle {
       text-align: center;
       color: #555;
-      margin-bottom: 30px;
-      font-size: 16px;
+      margin-bottom: 35px;
+      font-size: 18px; /* Bigger subtitle */
     }
 
     /* Form fields */
     .field {
-      margin-bottom: 20px;
+      margin-bottom: 25px;
     }
 
     label {
       font-weight: 600;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
     .underline-input {
@@ -69,14 +70,14 @@
       border: none;
       border-bottom: 2px solid #4285f4;
       outline: none;
-      padding: 6px 2px;
-      font-size: 15px;
+      padding: 8px 2px; /* Bigger input */
+      font-size: 16px;  /* Bigger font */
     }
 
     select {
       width: 100%;
       padding: 10px;
-      font-size: 14px;
+      font-size: 16px; /* Bigger font */
       border: 1px solid #ccc;
       border-radius: 4px;
     }
@@ -89,11 +90,12 @@
     .options {
       margin-left: 10px;
       line-height: 2;
+      font-size: 16px; /* Bigger radio buttons */
     }
 
     .divider {
       border-bottom: 1px solid #ddd;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     /* Submit button */
@@ -101,8 +103,8 @@
       background-color: #1a73e8;
       color: white;
       border: none;
-      padding: 12px 18px;
-      font-size: 15px;
+      padding: 14px 20px; /* Bigger button */
+      font-size: 16px;    /* Bigger font */
       border-radius: 4px;
       cursor: pointer;
       width: 100%;
@@ -115,21 +117,45 @@
     /* Thank you message */
     .thank-you {
       text-align: center;
-      font-size: 22px;
+      font-size: 24px; /* Bigger thank-you text */
       color: #1a73e8;
       padding: 30px;
     }
 
     .another {
       text-align: center;
-      margin-top: 10px;
-      font-size: 14px;
+      margin-top: 15px;
+      font-size: 16px;
     }
 
     .another a {
       color: #1a73e8;
       text-decoration: underline;
       cursor: pointer;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+      .overlay {
+        padding: 30px 20px;
+      }
+
+      .header h1 {
+        font-size: 26px;
+      }
+
+      .subtitle {
+        font-size: 16px;
+      }
+
+      .underline-input, select, .options {
+        font-size: 14px;
+      }
+
+      button {
+        font-size: 15px;
+        padding: 12px;
+      }
     }
   </style>
 </head>
@@ -139,7 +165,7 @@
 
   <!-- College logo -->
   <div class="header">
-    <img src="logo.png" alt="Sarada Vilas College Banner"> <!-- Local logo file -->
+    <img src="logo.png" alt="Sarada Vilas College Banner">
     <h1>Sarada Vilas College</h1>
   </div>
 
