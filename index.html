@@ -12,43 +12,40 @@
       background-size: cover;
       background-position: center;
       margin: 0;
-      padding: 80px 0;
+      padding: 120px 0;
     }
 
-    /* FORM ZOOM */
+    /* FORM */
     .overlay {
       background: rgba(255, 255, 255, 0.95);
-      padding: 50px;
-      max-width: 800px;
+      padding: 60px;
+      max-width: 850px;
       margin: auto;
-      border-radius: 12px;
-      box-shadow: 0 6px 30px rgba(0,0,0,0.4);
+      border-radius: 14px;
+      box-shadow: 0 8px 35px rgba(0,0,0,0.4);
 
-      transform: scale(1.3);          /* FORM ZOOM */
+      transform: scale(1.25);
       transform-origin: top center;
     }
 
     .header {
       text-align: center;
-      margin-bottom: 35px;
+      margin-bottom: 40px;
     }
 
-    /* LOGO ZOOM */
+    /* LOGO ONLY – BIG & CLEAR */
     .header img {
-      max-width: 180px;
+      width: 320px;        /* BIG logo */
       height: auto;
       display: block;
       margin: 0 auto;
-
-      transform: scale(1.6);          /* LOGO ZOOM */
-      transform-origin: center;
     }
 
     .subtitle {
       text-align: center;
-      font-size: 17px;
+      font-size: 18px;
       color: #555;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     .field {
@@ -86,17 +83,17 @@
 
     .divider {
       border-bottom: 1px solid #ddd;
-      margin: 25px 0;
+      margin: 30px 0;
     }
 
     button {
       width: 100%;
-      padding: 14px;
+      padding: 15px;
       font-size: 16px;
       background: #1a73e8;
       color: #fff;
       border: none;
-      border-radius: 5px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
@@ -128,9 +125,9 @@
 
 <div class="overlay" id="formBox">
 
-  <!-- LOGO ONLY -->
+  <!-- LOGO ONLY (NO TEXT) -->
   <div class="header">
-    <img src="logo.png" alt="College Logo">
+    <img src="logo.png" alt="Sarada Vilas College Logo">
   </div>
 
   <div class="subtitle">
@@ -140,12 +137,12 @@
 
   <div class="field">
     <label>Student Name</label>
-    <input type="text" id="studentName" class="underline-input">
+    <input type="text" class="underline-input">
   </div>
 
   <div class="field">
     <label>Course</label>
-    <select id="courseSelect">
+    <select>
       <option value="">Select</option>
       <option>B.Sc (PMCs)</option>
       <option>BCA</option>
@@ -158,7 +155,7 @@
 
   <div class="field">
     <label>Teacher Name</label>
-    <select id="teacherSelect">
+    <select>
       <option value="">Select</option>
       <option>Shilpashree S</option>
       <option>Akshaya H L</option>
@@ -173,7 +170,7 @@
 
   <div class="field">
     <label>Subject</label>
-    <select id="subjectSelect">
+    <select>
       <option value="">Select</option>
       <option>C Programming</option>
       <option>Ada</option>
@@ -189,61 +186,7 @@
 
   <div class="divider"></div>
 
-  <div class="field">
-    <label>Teaching Quality</label>
-    <select id="teachingSelect">
-      <option value="">Select</option>
-      <option>Excellent</option>
-      <option>Good</option>
-      <option>Average</option>
-      <option>Poor</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label>Communication Skills</label>
-    <select id="communicationSelect">
-      <option value="">Select</option>
-      <option>Excellent</option>
-      <option>Good</option>
-      <option>Average</option>
-      <option>Poor</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label>Punctuality</label>
-    <select id="punctualitySelect">
-      <option value="">Select</option>
-      <option>Always</option>
-      <option>Sometimes</option>
-      <option>Rarely</option>
-    </select>
-  </div>
-
-  <div class="field">
-    <label>Strength of Teacher</label>
-    <div class="options">
-      <input type="radio" name="strength"> Friendly<br>
-      <input type="radio" name="strength"> Clear Explanation<br>
-      <input type="radio" name="strength"> Encouraging<br>
-      <input type="radio" name="strength"> Well Prepared
-    </div>
-  </div>
-
-  <div class="field">
-    <label>Overall Rating</label>
-    <select id="overallSelect">
-      <option value="">Select</option>
-      <option>Excellent</option>
-      <option>Good</option>
-      <option>Average</option>
-      <option>Poor</option>
-    </select>
-  </div>
-
   <button onclick="submitForm()">Submit</button>
-
 </div>
 
 <script>
